@@ -1,0 +1,156 @@
+html{
+    font-size: 12px;
+}
+html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,img,dt,dd,dl{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 16px;
+    font-weight: normal;
+}
+ul,ol,li{
+    list-style: none;
+}
+a,u{
+    text-decoration: none;
+    color: #000;
+}
+i,em{
+    font-style: normal;
+}
+b,strong{
+    font-weight: normal;
+}
+img{
+    display: block;
+    border:0;
+}
+input{
+    border:0;
+}
+.clearfix{
+    zoom:1;
+}
+.clearfix::after{
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    overflow:hidden;
+    visibility: hidden;
+}
+.bd{
+    width: 100%;
+    height: 100%;
+}
+.header-ad{
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.header-ad-main{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+.header-ad-banner{
+    display: block;
+    position: relative;
+    width: 1920px;
+    height: 90px;
+    text-align: center;
+    left: 50%;
+    margin-left: -960px;
+}
+.header-ad-banner img{
+    font-size: 0;
+}
+.header-ad-close{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.header-href{
+    width: 100%;
+    height: 30px;
+}
+.header-hr-main{
+    width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+}
+.left-smallnav{
+    float: left;
+}
+.left-smallnav ul li{
+    float: left;
+    height: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.left-smallnav ul li::before{
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #e4e4e4;
+}
+.left-smallnav ul li a{
+    padding: 0 8px;
+    color: #a4a4a4;
+}
+.left-smallnav ul li a:hover{
+    color:rgb(202,21,29);
+}
+.left-smallnav .left-smallnav-first{
+    padding-left: 0;
+}
+.left-smallnav ul li:first-child::before{
+    content: "";
+    width: 0;
+    height: 10px;
+}
+.app-download a,.get-more a{
+    padding-right: 2px!important;
+}
+.app-download{
+    /* border-bottom: 1px solid #ededed; */
+}
+.left-smallnav i{
+    color: #a4a4a4;
+}
+.qr-download{
+    width: 162px;
+    height: 140px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    display: none;
+    margin: 0;
+    padding:0;
+    z-index: -1;
+}
+.qr-download img{
+    margin: 30px auto 2px;
+}
+.qr-download p{
+    font-size: 14px;
+    text-align: center;
+    color: rgb(58,58,58);
+}
+.app-download:hover{
+    box-shadow: 0 0px 6px 0 rgba(121,121,121,0.26);
+}
+.app-download:hover .qr-download{
+    display: block;
+    box-shadow: 0 0px 6px 0 rgba(121,121,121,0.26);
+}

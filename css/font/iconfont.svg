@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="xiaotuziCduan_" unicode="&#58892;" d="M752.57 482.08L558.92 236.73c-20.75-25.85-72.63-25.85-93.38 0L271.3 482.08c-20.75 25.85-5.87 68.58 35.63 68.58h410.59c41.51 0 55.8-42.73 35.05-68.58z m0 0"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="xiaotuziCduan_1" unicode="&#58893;" d="M752.57 285.92c20.75-25.85 6.46-68.58-35.05-68.58H306.93c-41.5 0-56.38 42.73-35.63 68.58l194.24 245.35c20.75 25.85 72.63 25.85 93.38 0l193.65-245.35z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
