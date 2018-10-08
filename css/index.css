@@ -949,3 +949,47 @@ footer{
     background: url(../images/20180626164548324.png)
 }
 /* 底部 */
+/* 登录弹窗 */
+.login-window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,.3);
+}
+.login{
+    width: 500px;
+    height: 636px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -318px 0 0 -250px;
+    background: #fff;
+}
+.login-move{
+    width: 500px;
+    height: 30px;
+    background: #ca141d;
+}
+.login-content{
+    width: 100%;
+    height: 550px;
+}
+.login-tem{
+    width: 380px;
+    height: 530px;
+    margin: 3px auto;
+    background: red;
+}
+.login-foot{
+    line-height: 25px;
+    color: #717171;
+    text-align: center;
+}
+.login-foot a{
+    color: rgb(0, 125, 255);
+    text-decoration:underline;
+}
+/* 登录弹窗 */
