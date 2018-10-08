@@ -1,0 +1,14 @@
+$(function(){
+	$(".selp").click(function(){
+		$('.sele').removeClass('selon');
+		$('.sele').addClass('seloff');
+		$('.byphone').show().siblings().hide();
+		$(this).addClass('selon');
+	});
+	$(".sele").click(function(){
+		$('.selp').removeClass('selon');
+		$('.selp').addClass('seloff');
+		$('.byemail').show().siblings().hide();
+		$(this).addClass('selon');
+	});
+})
