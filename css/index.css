@@ -1201,6 +1201,31 @@ footer{
     height: 214px;
     background: url(../images/qrCode-help.png)
 }
+.error-tip{
+    width: 100%;
+    height: 15px;
+}
+.error{
+    display: none;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    color: #ff3320;
+    vertical-align: middle; 
+}
+.error i{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding: 7px;
+    float: left;
+    margin-right: 5px;
+    background-size: cover;
+    background: url(../images/btn_errorInfo.png) no-repeat;
+}
+.error em{
+    float: left;
+}
 .constr{
     width: 100%;
     height: 23px;
@@ -1228,5 +1253,13 @@ footer{
 .login-foot a{
     color: rgb(0, 125, 255);
     text-decoration:underline;
+}
+.phone-verify{
+    width: 100%;
+    height: 530px;
+}
+.verify-item{
+    width: 328px;
+    height: 44px;
 }
 /* 登录弹窗 */
