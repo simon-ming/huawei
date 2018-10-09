@@ -11,4 +11,8 @@ $(function(){
 		$('.byemail').show().siblings().hide();
 		$(this).addClass('selon');
 	});
+	$(".authpic").click(function(){
+		$(this).attr({'src':'https://hwid1.vmall.com/Captcha/authCodeImage?session_code_key=p_reg_login_websso_session_ramdom_code_key&_t'+Date.now()})
+		console.log($(this))
+	})
 })

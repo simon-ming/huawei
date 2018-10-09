@@ -1,7 +1,7 @@
 html{
     font-size: 12px;
 }
-html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,img,dt,dd,dl{
+html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,input,fieldset,legend,img,dt,dd,dl{
     margin:0;
     padding:0;
 }
@@ -47,7 +47,7 @@ input{
 /* 头部 */
 
 .header-ad{
-    width: 100%;
+    min-width: 1200px;
     height: 90px;
     overflow: hidden;
     margin: 0 auto;
@@ -339,7 +339,7 @@ input{
 /* 导航 */
 /* 轮播图 */
 .slider-section{
-    width: 100%;
+    min-width: 1200px;
     height: 450px;
     margin: 0 auto;
     overflow: hidden;
@@ -956,6 +956,7 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
+    display: none;
     z-index: 1000;
     background: rgba(0,0,0,.3);
 }
@@ -971,6 +972,7 @@ footer{
 .login-move{
     width: 500px;
     height: 30px;
+    cursor: move;
     background: #ca141d;
 }
 .login-content{
@@ -981,9 +983,244 @@ footer{
     width: 380px;
     height: 530px;
     margin: 3px auto;
-    background: red;
+    overflow: hidden;
+}
+.login-title{
+    width: 380px;
+    height: 20px;
+    margin:24px auto;
+}
+.login-title span{
+    display: block;
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+}
+.account{
+    width: 190px;
+}
+.qr-login{
+    width: 189px;
+    border-left: 1px solid #ccc;
+}
+.login-title .mode-sel,.login-title span:hover{
+    color: #B40707;
+}
+.login-form{
+    width: 328px;
+    height: 259px;
+    margin: 0 auto;
+}
+.login-item input::-webkit-input-placeholder{
+            color:rgb(204,204,204);
+}
+.login-item input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:rgb(204,204,204);
+}
+.login-item input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:rgb(204,204,204);
+}
+.login-item input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:rgb(204,204,204);
+}
+.login-item input{
+    outline: none;
+}
+.login-item{
+    width: 328px;
+    height: 46px;
+}
+.user,.pwd{
+    width: 328px;
+    height: 45px;
+    border-bottom: 1px solid #ccc;
+}
+.phone-ver{
+    display: block;
+    width: 11px;
+    height: 15px;
+    float: left;
+    margin-right: 6px;
+    background: url(../images/ic_smsLogin.png) -2px 0;
+}
+.ver-content{
+    padding: 15px 0;
+    cursor: pointer;
+
+}
+.msg-phone{
+    cursor: pointer;
+    float: left;
+    color: rgb(0, 125, 255);
+}
+.tologin{
+    width: 328px;
+    height: 46px;
+    border-radius: 23px;
+    color: #fff;
+    background: #B40707;
+}
+.rm-left{
+    padding: 14px 0;
+    float: left;
+}
+.rm-left span{
+    float: left;
+    line-height: 18px;
+    color: #333;
+}
+.rm-right{
+    cursor: pointer;
+    padding: 14px 0;
+    float: right;
+    line-height: 18px;
+    color: rgb(0, 125, 255);
+}
+.selected{
+    cursor: pointer;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    margin-right: 6px;
+    background: url(../images/tick-off.png);
+    background-size: cover;
+}
+.down-help{
+    height: 12px;
+    text-align: center;
+}
+.down-help em{
+    line-height: 12px;
+    padding: 0 10px;
+    color: #ccc;
+}
+.down-help a{
+    line-height: 12px;
+    color: rgb(0, 125, 255);
+}
+.other-way{
+    width: 328px;
+    height: 82px;
+    margin-top: 120px;
+}
+.other-title{
+    width: 328px;
+    height: 18px;
+}
+.border-left,.border-right{
+    width: 94px;
+    height: 1px;
+    float: left;
+    margin-top: 8px;
+}
+.tel-mid{
+    width: 92px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    float: left;
+    color: #ccc;
+}
+.border-left{
+    margin-left: 24px;
+    background: url(../images/thirdLine.png);
+}
+.border-right{
+    background: url(../images/thirdLine-reverse.png);
+}
+.other-con{
+    width: 328px;
+    height: 42px;
+    margin-top: 10px;
+    text-align: center;
+}
+.other-con span{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+}
+.other-con a{
+    display: block;
+    width: 42px;
+    height: 42px;
+}
+.qq{
+    background: url(../images/third_login.png) -72px -9px;
+}
+.qq:hover{
+    background: url(../images/third_login.png) -72px -55px;
+}
+.alipay{
+    background: url(../images/third_login.png) -132px -9px;
+}
+.alipay:hover{
+    background: url(../images/third_login.png) -132px -55px;
+}
+.wechat{
+    background: url(../images/third_login.png) -12px -9px;
+}
+.wechat:hover{
+    background: url(../images/third_login.png) -12px -55px;
+}
+
+.qr-content{
+    width: 380px;
+    height: 364px;
+    margin:0 auto;
+}
+.qr-img-det{
+    position: relative;
+    width: 380px;
+    height: 318px;
+}
+.qrimg{
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border:1px solid #999;
+    top:78px;
+    left:109px;
+    background: #fff;
+}
+.qr-help{
+    position: absolute;
+    left: 232px;
+    top:50px;
+    opacity: 0;
+    z-index: 9;
+    width: 130px;
+    height: 214px;
+    background: url(../images/qrCode-help.png)
+}
+.constr{
+    width: 100%;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    font-size: 12px;
+}
+.close{
+    width: 11px;
+    height: 12px;
+    float: right;
+    margin: 9px 12px 0 0;
+    cursor: pointer;
+    background: url(../images/icon1.png) -148px 0;
+}
+.constr span{
+    color: rgb(0, 125, 255);
 }
 .login-foot{
+    width: 100%;
     line-height: 25px;
     color: #717171;
     text-align: center;
