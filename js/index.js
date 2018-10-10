@@ -113,4 +113,7 @@ $(function(){
 		}
 	}())
 	drag.init();
+	var reg=(function(){
+		
+	}())
 })

@@ -1374,3 +1374,16 @@ footer{
 
 }
 /* 登录弹窗 */
+
+
+/*li加hover阴影*/
+.shop-show li{
+    transition: .2s;
+}
+.shop-show li:hover{
+    box-shadow: 0 30px 50px rgba(0,0,0,.07);
+    transform:translate3d(0,0,5px);
+}
+
+
+/*li加hover阴影*/
