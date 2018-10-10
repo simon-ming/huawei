@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>华为首页</title>
+	<title>华为商城（VMALL.COM）_华为手机、荣耀手机、官网正品保障</title>
+	<link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
 	<link rel="stylesheet" href="css/font/iconfont.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/css/swiper.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/index.js"></script>
+	
 </head>
 <body>
 <div class="bd">
@@ -60,7 +64,7 @@
 			</div>
 			<div class="right-smallnav">
 				<ul class="clearfix">
-					<li><a href="#" class="left-smallnav-first login-btn">登录</a><a href="register.html" class="">注册</a></li>
+					<li><a href="#" class="left-smallnav-first login-btn">请登录</a><a href="register.html" class="">注册</a></li>
 					<li><a href="#" class="">我的订单</a></li>
 					<li class="right-shop">
 						<div class="li-con">
@@ -111,17 +115,18 @@
 	</nav>
 	<div class="slider-section">
 		<div class="slider-section-content">
-			<div class="slider">
-				<ul>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
-					<li><a href=""><img src="images/20180928220842913.jpg" alt=""></a></li>
+			<div class="swiper-container slider">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide"><a href=""><img src="images/20180930172842959.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20180930184345392.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181005150702989.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181005150758215.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181008183555945.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181008221601495.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181009153727707.jpg" alt=""></a></li>
+					<li class="swiper-slide"><a href=""><img src="images/20181009170324676.jpg" alt=""></a></li>
 				</ul>
+				<div class="swiper-pagination"></div>
 			</div>
 			<div class="left-navlist">
 				<ul>
@@ -486,7 +491,6 @@
 						</div>
 					</li>
 				</ul>
-
 			</div>
 		</div>
 	</div>
@@ -543,27 +547,41 @@
 					</ul>
 				</li>
 				<li class="public">
-					<div class="public-top">
+					<div class="public-top clearfix">
 						<div class="pub-title">
 							公告
 						</div>
-						<ul>
-							<li>华为商城会员日抽奖赚积分</li>
-						</ul>
+						<div class="swiper-container news_slider">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide"><a href="">华为商城会员日抽奖赚积分</a></li>
+								<li class="swiper-slide"><a href="">「影像家」线上用户报名中奖名单公布</a></li>
+								<li class="swiper-slide"><a href="">金秋国庆大放价，爆款手机最高直降1000</a></li>
+								<li class="swiper-slide"><a href="">黄金周“焕”新机 ——华为陪你过十一</a></li>
+								<li class="swiper-slide"><a href="">华为商城会员日9月28日感恩大回馈</a></li>
+								<li class="swiper-slide"><a href="">「影像家」线上用户报名中奖名单公布</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="public-down">
 						<ul>
 							<li>
-								<span class="pub-pic"></span>
-								<span>优购码</span>
+								<a href="">
+									<span class="pub-pic"></span>
+									<span>优购码</span>
+								</a>
 							</li>
 							<li>
-								<span class="pub-pic pic1"></span>
-								<span>优购码</span>
+								<a href="">
+									<span class="pub-pic pic1"></span>
+									<span>优购码</span>
+								
+								</a>
 							</li>
 							<li>
-								<span class="pub-pic pic2"></span>
-								<span>优购码</span>
+								<a href="">
+									<span class="pub-pic pic2"></span>
+									<span>优购码</span>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -809,15 +827,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="mid-slider">
-			<ul>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
-				<li><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
+		<div class="swiper-container mid-slider">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href=""><img src="images/2018062214341386.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/2018093019113608.png" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/20180824093821954.png" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/20180913163850512.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/20180930170305705.png" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/20180930173509774.jpg" alt=""></a></li>
+				<li class="swiper-slide"><a href=""><img src="images/20180930092036356.jpg" alt=""></a></li>
 			</ul>
+			<div class="swiper-pagination"></div>
 		</div>
 		<div class="phone-section">
 			<div class="phone-title">
@@ -1375,7 +1395,7 @@
 			</div>
 			<div class="login-content">
 				<div class="login-tem">
-					<div class="usual-way" style="display: none">
+					<div class="usual-way">
 						<div class="login-title">
 							<span class="account mode-sel">账号登录</span>
 							<span class="qr-login">扫码登录</span>
@@ -1390,10 +1410,10 @@
 										
 									</div>
 									<div class="login-item">
-										<input type="text" class="user" placeholder="手机号/邮件地址">
+										<input type="text" class="user  selfcolor" placeholder="手机号/邮件地址">
 									</div>
 									<div class="login-item">
-										<input type="text" class="pwd" placeholder="密码">
+										<input type="text" class="pwd selfcolor" placeholder="密码">
 									</div>
 									<div class="login-item">
 										<div class="ver-content">
@@ -1413,7 +1433,7 @@
 											<span>更多</span>
 										</div>
 									</div>
-									<p class="down-help"><a href="">注册账号</a><em>|</em><a href="">忘记密码?</a></p>
+									<p class="down-help"><a href="register.html">注册账号</a><em>|</em><a href="https://hwid1.vmall.com/CAS/portal/resetPwd/forgetbyid.html">忘记密码?</a></p>
 								</form>
 							</div>
 							<div class="other-way">
@@ -1424,27 +1444,33 @@
 								</div>
 								<div class="other-con">
 									<span>
-										<a href="" class="qq">
+										<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=209207&redirect_uri=https://hwid1.vmall.com/CAS/qq/return&response_type=code&state=ecd9f61472594593e25321009099328b&scope=get_user_info,add_topic,add_one_blog,add_album,upload_pic,list_album,add_share,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idollist,add_idol,del_ido,get_tenpay_addr" class="qq">
 										</a>
 									</span>
 									<span>
-										<a href="" class="alipay">
+										<a href="https://auth.alipay.com/login/express.html" class="alipay">
 										</a>
 									</span>
 									<span>
-										<a href="" class="wechat">
+										<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx8b6c0245e6c3b038&redirect_uri=https%3A%2F%2Fhwid1.vmall.com%2FCAS%2Fweixin%2Freturn&response_type=code&scope=snsapi_login&state=TSD3VB2jFmvwkZKms3zGmN5vShjXGGnz#wechat_redirect" class="wechat">
 										</a>
 									</span>
 								</div>
 							</div>
 						</div>
-						<div class="useqr"  style="display: none;">
+						<div class="useqr"   style="display: none;">
 							<div class="qrcode-main">
 								<div class="qr-content">
 									<div class="qr-img-det">
 										<div class="qrimg">
 											<div class="qr-det">
 												<img src="https://hwid1.vmall.com/DimensionalCode/getqrWeb?appID=com.huawei.hwidweb&loginChannel=7000700&reqClientType=700&confirmFlag=1&version=13200&_t=1539064997741" alt="">
+												<div class="qr-timeout" style="display: none;">
+													<div class="qr-timeout-tip">
+														<p>二维码失效</p>
+														<a href="javascript:;" class="refush">刷新</a>
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="qr-help"></div>
@@ -1457,20 +1483,25 @@
 					</div>
 					<div class="phone-verify">
 						<div class="back">< 返回</div>
+						<div class="phone-error">
+							<span class="error">
+								<i></i><em>帐号或密码错误，请重新输入。</em>
+							</span>
+						</div>
 						<form action="">
-							<div class="verify-item">
+							<div class="verify-item forphone">
 								<div class="phone-left">
 									<span>+86中国</span>
-									<i></i>
+									<i class="iconfont icon-xiaotuziCduan_ icon-x"></i>
 								</div>
-								<em></em>
+								<em class="sbor"></em>
 								<div class="phone-right">
-									<input type="text" placeholder="手机号">
+									<input type="text" class="selfcolor" placeholder="手机号">
 								</div>
 							</div>
-							<div class="verify-item">
-								<input type="text">
-								<a href="">获取验证码</a>
+							<div class="verify-item foraccount">
+								<input type="text" class="verify-code selfcolor" placeholder="短信验证码">
+								<a href="" >获取验证码</a>
 							</div>
 							<div class="verify-item">
 								<div class="rm-left">
@@ -1489,5 +1520,48 @@
 		</div>
 	</div>
 </div>
+<script>
+	var swiper=new Swiper('.slider',{//大轮播图,淡入淡出,hover控制轮播
+		loop:true,
+		effect:'fade',
+		fadeEffect:{
+			crossFade:true,
+		},
+		autoplay:{
+			delay:5000,
+			disableOnInteraction: false,
+		},
+		pagination:{
+			el:'.swiper-pagination',
+			clickable:true
+		}
+	})
+	var mid_swiper=new Swiper('.mid-slider',{//中间广告轮播
+		loop:true,
+		effect:'fade',
+		fadeEffect:{
+			crossFade:true,
+		},
+		autoplay:{
+			delay:2000,
+			disableOnInteraction: false,
+		},
+		pagination:{
+			el:'.swiper-pagination',
+			clickable:true
+		}
+	})
+	var news_slider=new Swiper('.news_slider',{
+		loop:true,
+		autoplay:true,
+        direction: 'vertical'
+
+	})
+	 $(".swiper-pagination-bullet").hover(function() {
+          $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
+      },function() {
+          swiper.autoplay.start(); //鼠标移出之后，自动轮播开启
+      })
+</script>
 </body>
 </html>

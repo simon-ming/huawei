@@ -16,3 +16,6 @@ $(function(){
 		console.log($(this))
 	})
 })
+// function $(obj){
+// 	return document.querySelector(obj);
+// }

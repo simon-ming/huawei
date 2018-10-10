@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="css/login.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/login.js"></script>
+</head>
+<body>
+	<div class="bd">
+		<!-- 头部 -->
+		<header class="header">
+			<div class="header-center">
+				<div class="logo">
+					<h1><img src="images/HUAWEI.png" alt=""></h1>
+					<i>华为</i>
+				</div>
+				<i class="qu">|</i>
+				<h2 class="header-title">华为商城</h2>
+			</div>
+		</header>
+		<!-- 头部 -->
+		<!-- 注册内容 -->
+		<section class="section">
+			<div class="warn">
+				<span>依据《网络安全法》，为保障您的帐号安全与正常使用，请尽快绑定您的手机号，感谢您的理解及支持！</span>
+			</div>
+			<div class="login-wrap">
+				<div class="loginform">
+					<div class="login-tem">
+						<div class="usual-way">
+							<div class="login-title">
+								<span class="account mode-sel">账号登录</span>
+								<span class="qr-login">扫码登录</span>
+							</div>
+							<div class="useacount">
+								<div class="login-form">
+									<form action="">
+										<div class="error-tip">
+											<span class="error">
+												<i></i><em>帐号或密码错误，请重新输入。</em>
+											</span>
+											
+										</div>
+										<div class="login-item">
+											<input type="text" class="user  selfcolor" placeholder="手机号/邮件地址">
+										</div>
+										<div class="login-item">
+											<input type="text" class="pwd selfcolor" placeholder="密码">
+										</div>
+										<div class="login-item">
+											<div class="ver-content">
+												<i class="phone-ver"></i>
+											<span class="msg-phone">短信验证码登录</span>
+											</div>
+										</div>
+										<div class="login-item">
+											<input type="submit" class="tologin" value="登录">
+										</div>
+										<div class="login-item">
+											<div class="rm-left">
+												<i class="selected"></i>
+												<span>记住华为账号</span>
+											</div>
+											<div class="rm-right">
+												<span>更多</span>
+											</div>
+										</div>
+										<p class="down-help"><a href="register.html">注册账号</a><em>|</em><a href="https://hwid1.vmall.com/CAS/portal/resetPwd/forgetbyid.html">忘记密码?</a></p>
+									</form>
+								</div>
+								<div class="other-way">
+									<div class="other-title">
+										<i class="border-left"></i>
+										<span class="tel-mid">其他方式登录</span>						
+										<i class="border-right"></i>
+									</div>
+									<div class="other-con">
+										<span>
+											<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=209207&redirect_uri=https://hwid1.vmall.com/CAS/qq/return&response_type=code&state=ecd9f61472594593e25321009099328b&scope=get_user_info,add_topic,add_one_blog,add_album,upload_pic,list_album,add_share,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idollist,add_idol,del_ido,get_tenpay_addr" class="qq">
+											</a>
+										</span>
+										<span>
+											<a href="https://auth.alipay.com/login/express.html" class="alipay">
+											</a>
+										</span>
+										<span>
+											<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx8b6c0245e6c3b038&redirect_uri=https%3A%2F%2Fhwid1.vmall.com%2FCAS%2Fweixin%2Freturn&response_type=code&scope=snsapi_login&state=TSD3VB2jFmvwkZKms3zGmN5vShjXGGnz#wechat_redirect" class="wechat">
+											</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="useqr"   style="display: none;">
+								<div class="qrcode-main">
+									<div class="qr-content">
+										<div class="qr-img-det">
+											<div class="qrimg">
+												<div class="qr-det">
+													<img src="https://hwid1.vmall.com/DimensionalCode/getqrWeb?appID=com.huawei.hwidweb&loginChannel=7000700&reqClientType=700&confirmFlag=1&version=13200&_t=1539064997741" alt="">
+													<div class="qr-timeout" style="display: none;">
+														<div class="qr-timeout-tip">
+															<p>二维码失效</p>
+															<a href="javascript:;" class="refush">刷新</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="qr-help"></div>
+										</div>
+										<p class="constr">使用华为<span>移动服务APP</span>扫一扫</p>
+										<p class="constr">若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="phone-verify">
+							<div class="back">< 返回</div>
+							<div class="phone-error">
+								<span class="error">
+									<i></i><em>帐号或密码错误，请重新输入。</em>
+								</span>
+							</div>
+							<form action="">
+								<div class="verify-item forphone">
+									<div class="phone-left">
+										<span>+86中国</span>
+										<i class="iconfont icon-xiaotuziCduan_ icon-x"></i>
+									</div>
+									<em class="sbor"></em>
+									<div class="phone-right">
+										<input type="text" class="selfcolor" placeholder="手机号">
+									</div>
+								</div>
+								<div class="verify-item foraccount">
+									<input type="text" class="verify-code selfcolor" placeholder="短信验证码">
+									<a href="" >获取验证码</a>
+								</div>
+								<div class="verify-item">
+									<div class="rm-left">
+										<i class="selected"></i>
+										<span>记住华为账号</span>
+									</div>
+								</div>
+								<div class="verify-item">
+									<input type="submit" class="tologin" value="登录">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="down-content">
+					<p><a href="">华为帐号用户协议</a> <em>|</em> <a href="">关于华为帐号与隐私的声明</a> <em>|</em> <a href="">常见问题</a></p>
+					<p>Copyright © 2011-2018  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9</p>
+				</div>
+			</div>
+		</section>
+		<!-- 注册内容 -->
+
+	</div>
+</body>
+</html>
