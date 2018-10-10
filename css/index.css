@@ -642,7 +642,13 @@ input{
     width: 291px;
     height: 160px;
     float: left;
-    margin: 0 3px;
+    margin: 0 6px;
+}
+.shop-show ul li:first-child{
+    margin-left: 0;
+}
+.shop-show ul li:last-child{
+    margin-right: 0;
 }
 .sort-section{
     width: 1200px;
@@ -708,33 +714,65 @@ input{
 }
 .recom{
     width: 1200px;
-    overflow-x: scroll;
-
 }
-.recom .usual{
-    display:inline-block;
-    width: 2000px;
+.recom{
+    width: 1200px;
     height: 290px;
-    white-space: nowrap;
+    margin: 20px auto;
 }
 
 .usual li{
-    float: left;
     width: 217px;
     height: 290px;
     background: #fff;
-    margin-right:2px;
 }
 .usual li p{
     text-align: center;
     line-height: 25px;
     color: rgb(71,71,71);
 }
+.recom .page-prev,.recom .page-next{
+    width:22px;
+    height: 75px;
+    background-color: #f0f0f0; 
+    cursor: pointer;
+}
+.recom .page-prev:focus,.recom .page-next:focus{
+    outline: none;
+}
+.recom .page-prev{
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 107px;
+}
+.ileft{
+    display: block;
+    width: 11px;
+    height: 16px;
+    margin: 28px auto;
+    background-image: url(../images/icon-common.png);
+    background-position: -101px -1px;
+}
+.recom .page-next{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    top: 107px;
+}
+.iright{
+    display: block;
+    width: 11px;
+    height: 16px;
+    margin: 28px auto;
+    background-image: url(../images/icon-common.png);
+    background-position: -112px -1px;
+}
 .mid-slider{
     width: 1200px;
     height: 120px;
     position: relative;
-    margin: 20px auto;
+    margin: 20px auto!important;
 }
 .mid-slider .swiper-pagination{
     left:30%!important;
@@ -1378,12 +1416,19 @@ footer{
 
 /*li加hover阴影*/
 .shop-show li{
-    transition: .2s;
+    transition: 0.4s ;
 }
 .shop-show li:hover{
-    box-shadow: 0 30px 50px rgba(0,0,0,.07);
-    transform:translate3d(0,0,5px);
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
 }
 
+.hotsell li,.hot-left,.sort-section li,.temple-ul li{
+    transition: 0.4s ;
+    
+}
+.hotsell li:hover,.hot-left:hover,.sort-section li:hover,.temple-ul li:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,0.07);
+    transform:translate3d(0,-2px,0);
 
+}
 /*li加hover阴影*/
