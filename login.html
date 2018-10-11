@@ -38,18 +38,27 @@
 							</div>
 							<div class="useacount">
 								<div class="login-form">
-									<form action="">
+									<form action="" onsubmit="return false">
 										<div class="error-tip">
+											
+											<span class="error u-null">
+												<i></i><em>请输入您的账号</em>
+											</span>
+											<span class="error p-null">
+												<i></i><em>请输入您的密码</em>
+											</span>
+											<span class="error account-error">
+												<i></i><em>华为帐号限制在4~50 个字符</em>
+											</span>
 											<span class="error">
 												<i></i><em>帐号或密码错误，请重新输入。</em>
 											</span>
-											
 										</div>
 										<div class="login-item">
 											<input type="text" class="user  selfcolor" placeholder="手机号/邮件地址">
 										</div>
 										<div class="login-item">
-											<input type="text" class="pwd selfcolor" placeholder="密码">
+											<input type="password" class="pwd selfcolor" placeholder="密码">
 										</div>
 										<div class="login-item">
 											<div class="ver-content">
@@ -58,7 +67,7 @@
 											</div>
 										</div>
 										<div class="login-item">
-											<input type="submit" class="tologin" value="登录">
+											<input type="submit" class="tologin indexlogin" value="登录">
 										</div>
 										<div class="login-item">
 											<div class="rm-left">

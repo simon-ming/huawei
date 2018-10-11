@@ -6,6 +6,7 @@ $(function(){
 			$(".qr-timeout").show();
 		},40000)//40秒后二维码失效
 	}
+	//从cookie获取用户名
 	//时间处理程序
 	$(".qrimg").mouseenter(function(){
 		$(this).animate({left:'20px'});
@@ -113,7 +114,74 @@ $(function(){
 		}
 	}())
 	drag.init();
-	var reg=(function(){
-		
+	//正则验证
+	function _get(ele,all){
+		if(!all){
+			return document.querySelector(ele);
+		}else{
+			return document.querySelectorAll(ele);
+		}
+	}
+	var regAuth=(function(){
+		var $submit=_get('.indexlogin');
+		var $username=_get('.user');
+		var $password=_get('.pwd');
+
+		return {
+			init:function(){
+				this.check={
+					password:function(val){
+						var reg=/^\w{6,18}$/;
+						return reg.test(val)?1:0;
+					},
+					phone:function(val){
+						var reg=/^1[23456789]\d{9}$/;
+						return reg.test(val)?1:0;
+					},
+					repassword:function(val){
+						var ele=document.querySelector('.repassword');
+						return ele.value==val?1:0;
+					},
+					username:function(val){
+						var reg=/^\w{4,50}$/;
+						return reg.test(val)?1:0;
+					},
+					email:function(val){
+						var reg=/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+						return reg.test(val)?1:0;
+					},
+					isNull:function(val){
+						return val==''?1:0;
+					}
+				};
+				this.event();
+			},
+			event:function(){
+				var _this=this;
+				$submit.onclick=function(){
+					for(var i=0;i<_get('.error',true).length;i++){
+						_get('.error',true)[i].style.display="none";
+					}
+						$username.style.borderColor='#ccc';
+						$password.style.borderColor='#ccc';
+					var valu=$username.value.trim();
+					var valp=$password.value.trim();
+					console.log(1);
+					if(_this.check.isNull(valu)==1){
+						_get('.u-null').style.display="block";
+						$username.style.borderColor='rgba(255,51,32,0.5)';
+					}else if(_this.check.username(valu)!==1){
+						_get('.account-error').style.display="block";
+						$username.style.borderColor='rgba(255,51,32,0.5)';
+
+					}else if(_this.check.isNull(valp)==1){
+						_get('.p-null').style.display="block";
+						$password.style.borderColor='rgba(255,51,32,0.5)';
+
+					}
+				}
+			}
+		}
 	}())
+	regAuth.init();
 })

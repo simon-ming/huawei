@@ -130,8 +130,9 @@ input{
     padding-right: 2px!important;
 }
 .li-con{
-    line-height: 26px;
+    height: 28px;
     border: 1px solid rgba(0,0,0,0);
+    background: #fff;
     position: relative;
     top: 0;
     z-index: 100;
@@ -186,12 +187,14 @@ input{
     display: inline-block;
 }
 
-
+.get-more .li-con{
+    height: 29px
+}
 .more-list,.shopcar{
     width: 162px;
     height: 140px;
     position: absolute;
-    top: 28px;
+    top: 29px;
     right: 0px;
     display: none;
     margin: 0;
@@ -199,6 +202,9 @@ input{
     background: #fff;
     z-index: 10;
     border: 1px solid rgba(121,121,121,0.26);
+}
+.more-list{
+    top: 30px;
 }
 .more-list img{
     margin: 30px auto 2px;
@@ -737,6 +743,9 @@ input{
     background-color: #f0f0f0; 
     cursor: pointer;
 }
+.recom .page-prev:hover,.recom .page-next:hover{
+    background-color: #ccc; 
+}
 .recom .page-prev:focus,.recom .page-next:focus{
     outline: none;
 }
@@ -745,6 +754,12 @@ input{
     left: 0;
     z-index: 10;
     top: 107px;
+}
+.recom .disabled{
+    cursor: not-allowed;
+}
+.recom .disabled:hover{
+    background-color: #f0f0f0; 
 }
 .ileft{
     display: block;
@@ -1105,6 +1120,9 @@ footer{
     width: 328px;
     height: 45px;
     border-bottom: 1px solid #ccc;
+}
+.curcol{
+    border-bottom: 1px solid rgba(255,51,32,0.5);
 }
 .phone-ver{
     display: block;

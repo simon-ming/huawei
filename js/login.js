@@ -67,50 +67,74 @@ $(function(){
 		$(".qr-det img").attr({'src':'https://hwid1.vmall.com/DimensionalCode/getqrWeb?appID=com.huawei.hwidweb&loginChannel=7000700&reqClientType=700&confirmFlag=1&version=13200&_t='+Date.now()})
 		qrTimeout();
 	})
-	// 拖拽函数
-	// var drag=(function(){
-	// 	var $move=document.querySelector('.login-move');
-	// 	var $login=document.querySelector('.login');
-	// 	return {
-	// 		init(){
-	// 			this.event();
-	// 		},
-	// 		event(){
-	// 			$move.onmousedown=function(e){
-	// 				e= e || window.event;
-	// 				var l=e.offsetX;
-	// 				var t=e.offsetY;
-	// 				var maxX=window.innerWidth-$login.offsetWidth/2-17;
-	// 				var maxY=window.innerHeight-$login.offsetHeight/2;
-	// 				document.onmousemove=function(e){
-	// 					if(e.stopPropagation){
-	// 						e.stopPropagation();
-	// 					}else{
-	// 						e.cancelBubble=true;
-	// 					}
- //            			e.preventDefault()
-	// 					var x=e.pageX-l+$login.offsetWidth/2;//
-	// 					var y=e.pageY-t+$login.offsetHeight/2;//
-	// 					console.log(x)
-	// 					if(x<$login.offsetWidth/2){
-	// 						x=$login.offsetWidth/2
-	// 					}else if(x>maxX){
-	// 						x=maxX
-	// 					}
-	// 					if(y<$login.offsetHeight/2){
-	// 						y=$login.offsetHeight/2
-	// 					}else if(y>maxY){
-	// 						// y=maxY
-	// 					}
-	// 					$login.style.left=x+'px';
-	// 					$login.style.top=y+'px';
-	// 				}
-	// 			}
-	// 			document.onmouseup=function(){
-	// 				document.onmousemove=false;
-	// 			}
-	// 		}
-	// 	}
-	// }())
-	// drag.init();
+	function _get(ele,all){
+		if(!all){
+			return document.querySelector(ele);
+		}else{
+			return document.querySelectorAll(ele);
+		}
+	}
+
+	var regAuth=(function(){
+		var $submit=_get('.indexlogin');
+		var $username=_get('.user');
+		var $password=_get('.pwd');
+
+		return {
+			init:function(){
+				this.check={
+					password:function(val){
+						var reg=/^\w{6,18}$/;
+						return reg.test(val)?1:0;
+					},
+					phone:function(val){
+						var reg=/^1[23456789]\d{9}$/;
+						return reg.test(val)?1:0;
+					},
+					repassword:function(val){
+						var ele=document.querySelector('.repassword');
+						return ele.value==val?1:0;
+					},
+					username:function(val){
+						var reg=/^\w{4,50}$/;
+						return reg.test(val)?1:0;
+					},
+					email:function(val){
+						var reg=/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+						return reg.test(val)?1:0;
+					},
+					isNull:function(val){
+						return val==''?1:0;
+					}
+				};
+				this.event();
+			},
+			event:function(){
+				var _this=this;
+				$submit.onclick=function(){
+					for(var i=0;i<_get('.error',true).length;i++){
+						_get('.error',true)[i].style.display="none";
+					}
+						$username.style.borderColor='#ccc';
+						$password.style.borderColor='#ccc';
+					var valu=$username.value.trim();
+					var valp=$password.value.trim();
+					console.log(1);
+					if(_this.check.isNull(valu)==1){
+						_get('.u-null').style.display="block";
+						$username.style.borderColor='rgba(255,51,32,0.5)';
+					}else if(_this.check.username(valu)!==1){
+						_get('.account-error').style.display="block";
+						$username.style.borderColor='rgba(255,51,32,0.5)';
+
+					}else if(_this.check.isNull(valp)==1){
+						_get('.p-null').style.display="block";
+						$password.style.borderColor='rgba(255,51,32,0.5)';
+
+					}
+				}
+			}
+		}
+	}())
+	regAuth.init();
 })
