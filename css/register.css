@@ -1,7 +1,7 @@
 html{
     font-size: 12px;
 }
-html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,img,dt,dd,dl{
+html,body,ul,li,h1,h2,h3,h4,h5,h6,p,form,input,fieldset,legend,img,dt,dd,dl{
     margin:0;
     padding:0;
 }

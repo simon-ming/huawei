@@ -1,8 +1,6 @@
 <?php
-    // 获取用户名
-    header("Content-Type: application/json");
-
-    header("Access-Control-Allow-Origin:*");
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin:*");
 
     // 引用另外一个文件
     include "public/connect_db.php";

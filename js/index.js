@@ -7,6 +7,9 @@ $(function(){
 		},40000)//40秒后二维码失效
 	}
 	//从cookie获取用户名
+	if($.cookie('username')){
+		$('.showuser').html('<a href="#" class="left-smallnav-first login-btn">'+$.cookie('username')+'</a>');
+	}
 	//时间处理程序
 	$(".qrimg").mouseenter(function(){
 		$(this).animate({left:'20px'});
@@ -122,7 +125,7 @@ $(function(){
 			return document.querySelectorAll(ele);
 		}
 	}
-	var regAuth=(function(){
+	var login=(function(){
 		var $submit=_get('.indexlogin');
 		var $username=_get('.user');
 		var $password=_get('.pwd');
@@ -166,7 +169,6 @@ $(function(){
 						$password.style.borderColor='#ccc';
 					var valu=$username.value.trim();
 					var valp=$password.value.trim();
-					console.log(1);
 					if(_this.check.isNull(valu)==1){
 						_get('.u-null').style.display="block";
 						$username.style.borderColor='rgba(255,51,32,0.5)';
@@ -177,11 +179,43 @@ $(function(){
 					}else if(_this.check.isNull(valp)==1){
 						_get('.p-null').style.display="block";
 						$password.style.borderColor='rgba(255,51,32,0.5)';
+					}else{
+						// debugger
+						_this.sendAjax();
+
+					console.log(1);
 
 					}
+				}
+			},
+			sendAjax:function(){
+				var _this=this; 
+				$.ajax({
+					url:'php/login.php',
+					type:'post',
+					contentType:'application/json',
+					data:JSON.stringify({
+						username:$username.value,
+						password:$password.value
+					}),
+					success:function(data){
+						console.log(data)
+						_this.loginSuccess(data)
+					}
+				})
+			},
+			loginSuccess:function(data){
+				if(data.code==200){
+					document.cookie="user-id="+data.data.id;
+					document.cookie="username="+data.data.username;
+					document.cookie="token="+data.data.token;
+					localStorage.avatar=data.data.avatar;
+					$(".login-window").hide();
+				}else if(data.code==1000){
+					_get('.login_fail').style.display="block";
 				}
 			}
 		}
 	}())
-	regAuth.init();
+	login.init();
 })

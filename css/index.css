@@ -194,7 +194,7 @@ input{
     width: 162px;
     height: 140px;
     position: absolute;
-    top: 29px;
+    
     right: 0px;
     display: none;
     margin: 0;
@@ -202,6 +202,9 @@ input{
     background: #fff;
     z-index: 10;
     border: 1px solid rgba(121,121,121,0.26);
+}
+.shopcar{
+    top: 28px;
 }
 .more-list{
     top: 30px;
