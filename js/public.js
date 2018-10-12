@@ -75,53 +75,7 @@ $(function(){
 		$(".qr-det img").attr({'src':'https://hwid1.vmall.com/DimensionalCode/getqrWeb?appID=com.huawei.hwidweb&loginChannel=7000700&reqClientType=700&confirmFlag=1&version=13200&_t='+Date.now()})
 		qrTimeout();
 	})
-	// 拖拽函数
-	var drag=(function(){
-		var $move=document.querySelector('.login-move');
-		var $login=document.querySelector('.login');
-		return {
-			init(){
-				this.event();
-			},
-			event(){
-				$move.onmousedown=function(e){
-					e= e || window.event;
-					var l=e.offsetX;
-					var t=e.offsetY;
-					var maxX=window.innerWidth-$login.offsetWidth/2-17;
-					var maxY=window.innerHeight-$login.offsetHeight/2;
-					document.onmousemove=function(e){
-						if(e.stopPropagation){
-							e.stopPropagation();
-						}else{
-							e.cancelBubble=true;
-						}
-            			e.preventDefault()
-						var x=e.pageX-l+$login.offsetWidth/2;//
-						var y=e.pageY-t+$login.offsetHeight/2;//
-						console.log(x)
-						if(x<$login.offsetWidth/2){
-							x=$login.offsetWidth/2
-						}else if(x>maxX){
-							x=maxX
-						}
-						if(y<$login.offsetHeight/2){
-							y=$login.offsetHeight/2
-						}else if(y>maxY){
-							// y=maxY
-						}
-						$login.style.left=x+'px';
-						$login.style.top=y+'px';
-					}
-				}
-				document.onmouseup=function(){
-					document.onmousemove=false;
-				}
-			}
-		}
-	}())
-	drag.init();
-	//正则验证
+	// //正则验证
 	function _get(ele,all){
 		if(!all){
 			return document.querySelector(ele);

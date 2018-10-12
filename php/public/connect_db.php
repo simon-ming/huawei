@@ -3,8 +3,8 @@
   {
       public $host = "localhost";//定义默认连接方式
       public $account = "root";//定义默认用户名
-      // public $pass = "123456";//定义默认的密码
-      public $pass = "LMY147967";//定义默认的密码
+      public $pass = "123456";//定义默认的密码
+      //public $pass = "LMY147967";//定义默认的密码
       public $db_name = "shop";//定义默认的数据库名
       public $port = "3306";
   //成员方法   是用来执行sql语句的方法
