@@ -60,6 +60,43 @@ body{
 	margin:9px 0 0 10px;
 	border-radius: 2px;
 }
+.shopcar-operation{
+	padding-left: 40px;
+	height: 40px;
+	width: 1160px;
+	margin: 0 auto;
+	background: #fff;
+	color: #a4a4a4;
+	line-height: 40px;
+}
+.shopcar-operation .sel-input{
+	margin:13px 10px 0 0;
+}
+.select-all{
+	float: left;
+	width: 150px;
+}
+.sel-input{
+	display: inline-block;
+	float: left;
+	width: 14px;
+	height: 14px;
+	background: url(../images/icon-header.2e284b2.png) -18px -129px no-repeat;
+}
+.current-checked{
+	background: url(../images/icon-header.2e284b2.png) 0 -129px no-repeat;
+}
+.product-name{
+	float: left;
+
+	width: 450px;
+}
+.shop-price,.shop-count,.shop-total,.shop-operate{
+	float: left;
+	width: 100px;
+	text-align: center;
+	margin-left: 30px;
+}
 .iwarn{
 	display: block;
 	float: left;
@@ -71,8 +108,52 @@ body{
 }
 .shopcar-operation div{
 	float: left;
+	height: 40px;
 }
 .checked{
 	width: 150px;
-	height: 40px;
+}
+.shopcar-trade{
+	width: 1160px;
+	margin: 10px auto;
+	background: #fff;
+	padding: 20px 0 0 40px;
+	overflow: hidden;
+}
+.shopcar-trade .select-all{
+	display: block;
+	width: 30px;
+	float: left;
+	margin-top: 43px;
+}
+.small-shoppic{
+	float: left;
+	margin-right: 21px;
+}
+.shopimg-thumb{
+	width: 100px;
+	height: 100px;
+}
+.shopcar-det-area{
+	width: 1130px;
+	float: left;
+}
+.det-area{
+    font-size: 14px;
+	width: 1130px;
+	height: 100px;
+}
+.det-area .product-name a{
+	text-overflow: ellipsis;
+	max-height: 42px;
+    color: #3a3a3a;
+    font-size: 14px;
+    line-height: 21px;
+}
+.det-area .shop-total{
+	color: #ca141d;
+	font-weight: 700;
+}
+.det-area .shop-operate a{
+	color: #a4a4a4;
 }

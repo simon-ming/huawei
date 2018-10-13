@@ -41,7 +41,7 @@
 		</div>
 		<div class="shopcar-operation clearfix">
 			<div class="select-all">
-				<i class="sel-input"></i>
+				<i class="sel-input current-checked"></i>
 				<span>全选</span>
 			</div>
 			<div class="product-name">商品</div>
@@ -50,6 +50,25 @@
 			<div class="shop-total">数量</div>
 			<div class="shop-operate">操作</div>
 		</div>
+		<div class="shopcar-trade">
+			<div class="select-all">
+				<i class="sel-input current-checked">
+					
+				</i>
+			</div>
+			<div class="shopcar-det-area">
+				<div class="det-area">
+					<div class="small-shoppic">
+						<img src="images/142_142_1535358175728mp.jpg" alt="" class="shopimg-thumb">
+					</div>
+					<div class="product-name"><a href="">荣耀8X 千元屏霸 高屏占比 2000万AI双摄 全网通 </a>4GB+64GB（幻夜黑）套餐一</div>
+					<div class="shop-price">¥ 1449.00</div>
+					<div class="shop-count">数量</div>
+					<div class="shop-total">¥ 1449.00</div>
+					<div class="shop-operate"><a href="">删除</a></div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 
@@ -57,5 +76,12 @@
 		
 	</footer>
 	<div class="login-window"></div>
+	<script>
+		$(function(){
+			$('.sel-input').click(function(){
+				$(this).toggleClass('current-checked')
+			})
+		})
+	</script>
 </body>
 </html>
