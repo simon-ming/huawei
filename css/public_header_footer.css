@@ -51,6 +51,7 @@ input{
 header{
     width: 1200px;
     margin:0 auto;
+    background: #fff;
 }
 .header-href{
     width: 100%;

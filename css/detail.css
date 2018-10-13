@@ -83,6 +83,7 @@ hr{
 .product-detail{
 	width:1200px;
 	margin:0 auto;
+	overflow: hidden;
 }
 .your-location{
 	width: 100%;
@@ -152,6 +153,7 @@ hr{
 	margin:2px 0 0 3px;
 }
 .thumbs .swiper-slide{
+	box-sizing: border-box;
 	height: 70px!important;
 	cursor: pointer;
 }
@@ -186,6 +188,7 @@ hr{
 .detail-text{
 	width: 700px;
 	height: 462px;
+	color: #3a3a3a;
 	float: left;
 	padding: 0 0 104px 30px;
 }
@@ -236,6 +239,278 @@ hr{
 	border: 1px solid #ca141d;
 	margin-right: 10px;
 }
+.item-title{
+	width: 75px;
+	padding-left: 10px;
+	float: left;
+}
+.product-instruct{
+	height: 18px;
+	margin: 20px 0 18px 0;
+}
+.ins-right{
+	float: left;
+	line-height: 30px;
+}
+.ins-right em{
+	display: inline-block;
+	width: 1px;
+	height: 12px;
+	background: #ccc;
+	margin:0px 15px;
+	position: relative;
+	top: 2px;
+}
+.item-title + ul{
+	float: left;
+}
+.item-title + ul>li{
+	float: left;
+	border-radius: 3px;
+	border:1px solid #a4a4a4;
+	cursor:pointer;
+	padding: 0 12px;
+	margin: 0 10px 10px 0;
+}
+.product-code{
+	line-height: 18px;
+}
+.hrz{
+	width: 100%;
+	height: 1px;
+	background: rgb(221,221,221);
+	margin:5px 0 16px 0;
+}
+.sel-color{
+	height: 50px;
+}
+.sel-color .item-title{
+	line-height: 40px;
+}
+.sel-color ul{
+	height: 50px;
+}
+.sel-color ul li{
+	padding: 0 12px;
+	margin: 0 10px 10px 0;
+}
+.sel-color ul li span{
+	display: block;
+	float: left;
+	line-height: 40px;
+	margin-left: 6px;
+}
+.sel-color ul li img{
+	width: 30px;
+	float: left;
+	height: 30px;
+	margin-top: 5px
+}
+.sel-version,.sel-can{
+	height: 42px;
+}
+.sel-version .item-title,.sel-can .item-title{
+	line-height: 30px;
+}
+.sel-version li,.sel-can li{
+	line-height: 30px;
+}
+.sel-server{
+	height: 32px;
+}
+.sel-server,.item-title{
+	line-height: 30px;
+}
+.sel-server ul li{
+	padding: 0 12px 0 12px;
+	border:1px solid #d6d6d6;
+	/*border-bottom: 1px solid #fff;*/
+	background: #fff;
+	line-height: 30px;
+	margin:0 10px 0 0;
+	position: relative;
+	z-index: 10;
+}
+.sel-server .rel{
+	position: relative;
+}
+.sel-server ul{
+	position: relative;
+}
+.sel-server ul i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon50.png) no-repeat 0 0;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.ser-list{
+	width: 380px;
+	height: 48px;
+	border:1px solid #d6d6d6;
+	position: absolute;
+	background: #fff;
+	display: none;
+	z-index: 0;
+	top: 30px;
+	left: -1px;
+}
+.ser-list a:hover{
+	color:#ca141d;
+}
+.ser-list p{
+	padding-left: 10px;
+	line-height: 24px;
+}
+.sel-server li:hover .ser-list{
+	display: block;
+}
+.product-operation{
+	width: 730px;
+	height: 84px;
+	margin-top: 30px;
+}
+.attr-main{
+	line-height: 30px;
+	color: #ca141d;
+}
+.add-btn{
+	width: 63px;
+	height: 44px;
+	margin:0 10px;
+	float: left;
+	border:1px solid #d6d6d6;
+}
+.add-disabled{
+	cursor: not-allowed;
+	color: #c4c4c4;
+}
+.number{
+	display: block;
+	width: 41px;
+	height: 44px;
+	float: left;
+	line-height: 44px;
+	text-align: center;
+	color:#000;
+	font-size: 18px;
+	border-right: 1px solid #e2e2e2;
+}
+.add-btn p{
+	width: 21px;
+	float: left;
+}
+.num-add{
+	border-bottom: 1px solid #e2e2e2;
+}
+.num-add,.num-sub{
+	display: block;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #777;
+	line-height: 21px;
+	text-align: center;
+	float: left;
+}
+.toshopcar,.tobuy{
+	display: block;
+	float: left;
+	width: 172px;
+	height: 46px;
+	font-size: 18px;
+	line-height: 46px;
+	text-align: center;
+	color: #fff;
+	margin-right: 10px;
+}
+.toshopcar{
+	background: #fc600c;
+}
+.toshopcar:hover{
+	background: #fd803d;
+}
+.tobuy{
+	background: #ca151d;
+}
+.tobuy:hover{
+	background: #d5444b;
+}
+.sel-current{
+	border-color:#ca141d!important;
+}
 /*详情*/
+
+/*广告*/
+.recommend{
+	overflow: hidden;
+	min-width: 1200px;
+	margin-top: 20px;
+	border-top:1px solid rgb(221,221,221);
+}
+.recommend-main{
+	width: 1200px;
+	height: 60px;
+	margin:0 auto;
+}
+.recom-title{
+	height: 27px;
+	position: relative;
+	width: 96px;
+	text-align: center;
+	font-size: 18px;
+	left: 552px;
+	top:15px;
+}
+.recom-title::before,.recom-title::after{
+	content: " ";
+    width: 6px;
+    height: 1px;
+    background: #3a3a3a;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+.recom-title:before{
+    left: 0;
+}
+.recom-list{
+	width: 1200px;
+	height: 100px;
+	margin:0 auto;
+}
+.recom-list ul li{
+	float: left;
+	margin:0 44px;
+	width: 212px;
+	height: 64px;
+}
+.recom-list img{
+	width: 64px;
+	height: 64px;
+	float: left;
+}
+.recom-list p{
+	float: left;
+	margin-left: 10px;
+}
+.recom-list span{
+	line-height: 43px
+}
+.recom-list em{
+	color: #ca141d;
+}
+.ad-detail{
+	width: 100%;
+}
+.ad-detail img{
+	width: 100%;
+	height: 100%;
+}
+/*广告*/
 
 /*商品详情*/

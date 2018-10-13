@@ -28,8 +28,8 @@ $(function(){
 					var by=$(this).offset().top;
 					var _x=$(".zoom").width()/2;
 					var _y=$(".zoom").height()/2;
-					var maxX=$(this).width()-$(".zoom").width();
-					var maxY=$(this).height()-$(".zoom").height();
+					var maxX=$(this).width()-$(".zoom").width()-2;
+					var maxY=$(this).height()-$(".zoom").height()-2;
 					$(document).mousemove(function(e){
 						var x=e.pageX-bx-_x;
 						var y=e.pageY-by-_y;
@@ -45,7 +45,7 @@ $(function(){
 						}
 						$('.zoom').css('left',x+'px')
 						$('.zoom').css('top',y+'px')
-						$('.big-zoom').css('backgroundPosition',-2*x+'px '+(-2*y+'px'))
+						$('.big-zoom').css('backgroundPosition',-8/9*2*x+'px '+(-8/9*2*y+'px'))
 					})
 				},function(){
 					$('.zoom').hide();
@@ -55,8 +55,39 @@ $(function(){
 
 				$(".thumbs .swiper-slide,.next,.prev").click(function() {
 					$('.big-zoom').css('backgroundImage',"url("+$('.swiper-slide-active img').attr('src')+")")
-			    })
-
+			    });
+			   	$('.num-add').click(function(e,max=5){//处理购物车数量添加
+			   		if($('.number').val()>=max){
+			   			$('.number').val(max)
+			   			console.log($('.number').val())
+			   		}else{
+			   			$('.number').val(Number($('.number').val())+1);
+			   		}
+			   	})
+			   	$('.num-sub').click(function(e,min=1){
+			   		if($('.number').val()<=min){
+			   			$('.number').val(min)
+			   			$(this).addClass('add-disabled');
+			   		}else{
+			   			$('.number').val(Number($('.number').val())-1);
+			   		}
+			   	})
+			   	$('.num-add,.num-sub').click(function(e,max=5,min=1){
+			   		$('.num-add,.num-sub').removeClass('add-disabled');
+			   		if($('.number').val()<=min){
+			   			$('.num-sub').addClass('add-disabled');
+			   		}else if($('.number').val()>=max){
+			   			$('.num-add').addClass('add-disabled');
+			   		}
+			   	})
+			   	$('.sel-color li,.sel-version li,.sel-can li,.sel-server li').click(function(){
+			   		$(this).addClass('sel-current').siblings().removeClass('sel-current')
+			   		$('.attr-main').html($('.sel-color .sel-current span').html()+' / '+$('.sel-version .sel-current span').html()+' / '+$('.sel-can .sel-current span').html()+' / '+$('.sel-server .sel-current span').html())
+			   	})
+			   	$('.ser-list a').click(function(){
+			   		var h=$(this).html();
+			   		$(this).parent().parent().parent().find('span').html(h);
+			   	})
 			}
 			
 		}
