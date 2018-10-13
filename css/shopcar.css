@@ -36,3 +36,43 @@ body{
 .down-ce{
 	margin-top: 0!important
 }
+.login-prompt{
+	width: 1158px;
+	height: 48px;
+	border: 1px solid #eace85;
+	background: #fffdee;
+	margin:10px auto;
+	padding:0 20px;
+}
+.login-prompt p{
+	float: left;
+	line-height: 48px;
+	color: #ca141d;
+}
+.login-prompt a{
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	background: #ca141d;
+	color: #fff;
+	text-align: center;
+	margin:9px 0 0 10px;
+	border-radius: 2px;
+}
+.iwarn{
+	display: block;
+	float: left;
+	margin-top: 19px;
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+	background: url(../images/icon-tips01.2080462.png) no-repeat;
+}
+.shopcar-operation div{
+	float: left;
+}
+.checked{
+	width: 150px;
+	height: 40px;
+}
