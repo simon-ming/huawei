@@ -80,14 +80,72 @@ $(function(){
 			   			$('.num-add').addClass('add-disabled');
 			   		}
 			   	})
-			   	$('.sel-color li,.sel-version li,.sel-can li,.sel-server li').click(function(){
+			   	//点击套餐,颜色,版本, 修改整体属性
+			   	$('.sel-color li,.sel-version li,.sel-can li,.sel-server li').on('click',function(){
 			   		$(this).addClass('sel-current').siblings().removeClass('sel-current')
 			   		$('.attr-main').html($('.sel-color .sel-current span').html()+' / '+$('.sel-version .sel-current span').html()+' / '+$('.sel-can .sel-current span').html()+' / '+$('.sel-server .sel-current span').html())
+			   		$('.h-version').html($('.sel-version .sel-current span').html())//修改版本
+			   		$('.h-color').html($('.sel-color .sel-current span').html())//修改颜色
+			   		$('.h-combo').html($('.sel-can .sel-current span').html())//修改套餐
 			   	})
+				//保险下拉菜单处理
 			   	$('.ser-list a').click(function(){
 			   		var h=$(this).html();
 			   		$(this).parent().parent().parent().find('span').html(h);
 			   	})
+			   	//关闭按钮
+			   	$('.seetoo,.add-win-close').click(function(){
+			   		$('.add-cover').hide();
+			   	})
+			   	//加入购物车,创建localstorage
+			   	$('.toshopcar').click(function(){
+			   		addLocalStorage()
+			   		$('.add-cover').show();
+			   	})
+		   		
+			   	function addLocalStorage(){
+				   	$('.add-name-text').html(name);//赋值弹出框成功内容
+
+			   		//1.提取标题
+				   	var name=$('.detail-text h1').html().replace(/<[^>]+>/ig,'')
+				   	//2.提取id
+				   	var id=$('.current-id').attr('value')
+				   	//3.提取价格
+				   	var price=$('.product-price').html().replace(/[^\d.]/g,'')
+				   	//4.提取数量
+				   	var count=$('.number').val();
+				   	//5.获取图片
+				   	var src=$('.sel-color .sel-current img').attr('src');
+				   	var obj={
+				   		name:name,
+				   		goodsid:id,
+				   		price:price,
+				   		count:count,
+				   		src:src
+				   	}
+				   	// console.log(obj)
+				   	//判断是否重复
+				   	var jsonStr='['+JSON.stringify(obj)+']';
+				   	var curStorage=localStorage.getItem('shopcar');
+				   	if(curStorage){
+				   		shopcarArr=JSON.parse(curStorage);
+				   		for(var i=0;i<shopcarArr.length;i++){
+				   			for(var j in shopcarArr[i] ){
+				   				if(i==count){
+				   					continue;
+				   				}else{
+				   					
+				   				}
+				   			}
+				   		}
+				   	}else{
+			   			localStorage.setItem('shopcar',jsonStr)
+				   	}
+				   	// console.log(curStorage);
+
+				   	// console.log(name+','+id+','+price+','+count+','+src);
+			   	}
+			   	
 			}
 			
 		}

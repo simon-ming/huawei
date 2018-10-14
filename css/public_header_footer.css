@@ -33,6 +33,14 @@ input{
 .clearfix{
     zoom:1;
 }
+.clearfix::after{
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    overflow:hidden;
+    visibility: hidden;
+}
 .clearfix::before{
     content: ".";
     height: 0;

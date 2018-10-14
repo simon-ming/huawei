@@ -32,6 +32,7 @@ body{
 .shopcar-content{
 	min-height: 500px;
 	background: #f5f5f5;
+	overflow: hidden;
 }
 .down-ce{
 	margin-top: 0!important
@@ -96,6 +97,10 @@ body{
 	width: 100px;
 	text-align: center;
 	margin-left: 30px;
+	min-height: 14px;
+}
+.shop-count div{
+	margin-left: 17px;
 }
 .iwarn{
 	display: block;
@@ -116,6 +121,7 @@ body{
 .shopcar-trade{
 	width: 1160px;
 	margin: 10px auto;
+	font-size: 14px;
 	background: #fff;
 	padding: 20px 0 0 40px;
 	overflow: hidden;
@@ -127,6 +133,7 @@ body{
 	margin-top: 43px;
 }
 .small-shoppic{
+	width: 100px;
 	float: left;
 	margin-right: 21px;
 }
@@ -135,11 +142,13 @@ body{
 	height: 100px;
 }
 .shopcar-det-area{
+	margin-bottom: 20px;
 	width: 1130px;
 	float: left;
 }
 .det-area{
     font-size: 14px;
+    margin-bottom: 18px;
 	width: 1130px;
 	height: 100px;
 }
@@ -156,4 +165,179 @@ body{
 }
 .det-area .shop-operate a{
 	color: #a4a4a4;
+}
+.add-btn{
+	width: 63px;
+	height: 44px;
+	margin:0 10px;
+	float: left;
+	border:1px solid #d6d6d6;
+}
+.add-disabled{
+	cursor: not-allowed;
+	color: #c4c4c4;
+}
+.number{
+	display: block;
+	width: 41px;
+	height: 44px;
+	float: left;
+	line-height: 44px;
+	text-align: center;
+	color:#000;
+	font-size: 18px;
+	border-right: 1px solid #e2e2e2;
+}
+.add-btn p{
+	width: 21px;
+	float: left;
+}
+.num-add{
+	border-bottom: 1px solid #e2e2e2;
+}
+.num-add,.num-sub{
+	display: block;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #777;
+	line-height: 21px;
+	text-align: center;
+	float: left;
+}
+.det-extra{
+	position: relative;
+	width: 1070px;
+	background: #f5f5f5;
+	padding: 14px 0 14px 20px;
+}
+.det-extra::before{
+	content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #f5f5f5;
+    position: absolute;
+    top: -7px;
+    left: 23px;
+    z-index: 2;
+}
+.extra-img{
+	display: block;
+	float: left;
+	margin-right: 20px;
+	width: 36px;
+	height: 36px;
+}
+.extra-img img{
+	width: 36px;
+	height: 36px;
+}
+.det-extra .small-shoppic{
+	margin-right: 0;
+}
+.gettotal-box{
+	min-width: 1200px;
+	height: 60px;
+	margin-bottom: 15px;
+}
+.unin{
+	background: #fff;
+	box-shadow: 0 -4px 4px 0 #ccc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-bottom: 0;
+}
+.gettotal-main{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+	background: #fff;
+}
+.gettotal-sel{
+	float: left;
+	width: 140px;
+	height: 100%;
+}
+.gettotal-sel .select-all{
+	margin:23px 0 0 40px;
+}
+.gettotal-sel .select-all{
+	display: block;
+	width: 14px;
+	float: left;
+}
+.sel-it{
+	display: block;
+	line-height: 60px;
+	margin-left: 18px;
+	width: 24px;
+	height: 60px;
+	float: left;
+	color: #3a3a3a;
+}
+.total-icon{
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 6px;
+	left: 180px;
+	background: url(../images/icon-order.6c7ea20.png) -22px -137px;
+}
+
+.price-msg{
+	position: relative;
+	width: 175px;
+	height: 44px;
+	float: right;
+	margin-top: 7px;
+	padding-right: 30px;
+}
+.price-msg p{
+	text-align:right;
+}
+.price-msg p:first-child{
+	line-height: 26px;
+	font-size: 14px;
+	color: #3a3a3a;
+}
+.price-msg p:first-child span,.price-msg p:first-child em{
+	font-size: 18px;
+	color: #ca151e;
+	font-weight: 700;
+}
+.price-msg p:first-child span{
+	padding: 0 8px;
+}
+.price-msg p:last-child{
+	color: #a4a4a4;
+}
+.gettotal-btn{
+	float: right;
+}
+.gettotal-btn a{
+	display: block;
+	width: 180px;
+	height: 60px;
+	background: #ca151e;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+	color: #fff;
+}
+.final-count{
+	padding: 0 5px;
+	color: #ca151e;
+	font-weight: 700;
+
+}
+.discount{
+	color: #3a3a3a;
+	padding-left:5px;
 }
