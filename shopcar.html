@@ -115,9 +115,7 @@
 			$('.login-window').load('public/header_footer.html .login',function(){
 				$('head').append("<script src='js/public.js'><\/script>");//网页加载完后执行函数
 				$(function(){
-					$('.sel-input').click(function(){
-						$(this).toggleClass('current-checked')
-					})
+					
 					var eleTop=$('.gettotal-box').offset().top+60
 					var dis1=document.documentElement.clientHeight+document.documentElement.scrollTop;
 					showBox(dis1)

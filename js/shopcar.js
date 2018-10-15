@@ -7,13 +7,14 @@ $(function(){
 		for(var i=0;i<dataArr.length;i++){
 			// 处理src
 			dataArr[i].src='images/428_428'+dataArr[i].src.replace('images/40_40','')
-			var classStr='';
-			if(dataArr[i].count>=10){
-				classstr=' add-disabled';
-			}else if(dataArr[i].count<=1){
-				classstr=' add-disabled';
-			}
+			var aclassStr='';//处理加减的css样式
+			var sclassStr='';
 			var itemObj=$('<div class="shopcar-trade"></div>')[0];
+			if(dataArr[i].count==10){
+				aclassStr=' add-disabled';
+			}else if(dataArr[i].count==1){
+				sclassStr=' add-disabled';
+			}
 			for(var j in dataArr[i]){
 				itemObj[j]=dataArr[i][j]	
 			}
@@ -33,12 +34,12 @@ $(function(){
 						<div class="add-btn clearfix">
 							<input type="text" class="number" value="${dataArr[i].count}">
 							<p>
-								<a href="javascript:void(0);" class="num-add">+</a>
-								<a href="javascript:void(0);" class="num-sub${classStr}">-</a>
+								<a href="javascript:void(0);" class="num-add ${aclassStr}">+</a>
+								<a href="javascript:void(0);" class="num-sub ${sclassStr}">-</a>
 							</p>
 						</div>
 					</div>
-					<div class="shop-total">¥ ${Number(dataArr[i].price)*dataArr[i].count}</div>
+					<div class="shop-total">¥ ${(Number(dataArr[i].price)*dataArr[i].count).toFixed(2)}</div>
 					<div class="shop-operate"><a href="javascript:;">删除</a></div>
 				</div>
 				<div class="det-extra">
@@ -99,8 +100,21 @@ $(function(){
 
 	//结算数目
 	function getTotal(){
-		$('.shopcar-trade').each(function(){
-			$(this).find('')
+		//获取总价钱
+		var total=0;
+		$('.shopcar-trade .det-area ').each(function(){
+			if($(this).parents('.shopcar-trade').find('.current-checked').length){
+				var str=$(this).find('.shop-total').html().replace(/[¥\s]?/g,'')
+				total+=parseFloat(str);
+			}			
 		})
+		$('.final-total').html(total.toFixed(2))
+		// 获取总数量
+		console.log(1)
 	}
+	getTotal();
+	$('.sel-input').click(function(){
+		$(this).toggleClass('current-checked')
+		getTotal();
+	})
 })
