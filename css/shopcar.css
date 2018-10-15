@@ -43,6 +43,7 @@ body{
 	border: 1px solid #eace85;
 	background: #fffdee;
 	margin:10px auto;
+	margin-bottom: 20px;
 	padding:0 20px;
 }
 .login-prompt p{
@@ -81,6 +82,7 @@ body{
 	display: inline-block;
 	float: left;
 	width: 14px;
+	cursor: pointer;
 	height: 14px;
 	background: url(../images/icon-header.2e284b2.png) -18px -129px no-repeat;
 }
@@ -175,7 +177,7 @@ body{
 }
 .add-disabled{
 	cursor: not-allowed;
-	color: #c4c4c4;
+	color: #c4c4c4!important;
 }
 .number{
 	display: block;
@@ -211,6 +213,7 @@ body{
 	width: 1070px;
 	background: #f5f5f5;
 	padding: 14px 0 14px 20px;
+	display: inline-block;
 }
 .det-extra::before{
 	content: "";

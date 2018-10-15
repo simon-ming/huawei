@@ -104,10 +104,10 @@ $(function(){
 			   	})
 		   		
 			   	function addLocalStorage(){
-				   	$('.add-name-text').html(name);//赋值弹出框成功内容
 
 			   		//1.提取标题
 				   	var name=$('.detail-text h1').html().replace(/<[^>]+>/ig,'')
+				   	$('.add-name-text').html(name);//赋值弹出框成功内容
 				   	//2.提取id
 				   	var id=$('.current-id').attr('value')
 				   	//3.提取价格
@@ -123,24 +123,34 @@ $(function(){
 				   		count:count,
 				   		src:src
 				   	}
-				   	// console.log(obj)
-				   	//判断是否重复
+				   	//判断是否存在localStorage 是否对象重复
 				   	var jsonStr='['+JSON.stringify(obj)+']';
 				   	var curStorage=localStorage.getItem('shopcar');
+				   	var shopcarArr=JSON.parse(curStorage);
 				   	if(curStorage){
-				   		shopcarArr=JSON.parse(curStorage);
+				   		//循环所有数组里的对象,如果没有商品重复则创建新的对象
+				   		var noRepeat=true;
 				   		for(var i=0;i<shopcarArr.length;i++){
-				   			for(var j in shopcarArr[i] ){
-				   				if(i==count){
-				   					continue;
-				   				}else{
-				   					
-				   				}
+				   			//id和套餐相同则加数量
+				   			if(shopcarArr[i].goodsid === obj.goodsid && shopcarArr[i].name===obj.name){
+				   				// 发现重复添加数量
+				   				shopcarArr[i].count=Number(shopcarArr[i].count)+Number(obj.count);
+			   					localStorage.setItem('shopcar',JSON.stringify(shopcarArr))
+				   				noRepeat=false;//发现重复则,设置false,不执行添加对象
+				   				break;
 				   			}
 				   		}
+				   		if(noRepeat){//没有重复则添加对象
+			   				shopcarArr.push(obj);
+			   				console.log(obj)
+		   					localStorage.setItem('shopcar',JSON.stringify(shopcarArr))
+				   		}
 				   	}else{
+				   		//不存在localStorage,创建
 			   			localStorage.setItem('shopcar',jsonStr)
 				   	}
+				   	
+
 				   	// console.log(curStorage);
 
 				   	// console.log(name+','+id+','+price+','+count+','+src);
