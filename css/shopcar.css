@@ -344,3 +344,37 @@ body{
 	color: #3a3a3a;
 	padding-left:5px;
 }
+
+/* //空购物车样式 */
+.noshop{
+	width: 1200px;
+	height: 365px;
+	padding-top: 135px;
+	margin: 0 auto 20px;
+	background: #fff;
+}
+.mincart{
+	width: 100px;
+	height: 100px;
+	margin: 10px auto;
+	background: url(../images/icon-header-minicart.32e5f81.png) no-repeat;
+}
+.noshop p{
+	line-height: 18px;
+	font-size: 18px;
+	color: #a4a4a4;
+	text-align:center;
+	margin-bottom:18px;
+}
+.noshop a{
+	display: block;
+	width: 172px;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background: #ca141d;
+	border-radius: 3px;
+	margin: 0 auto;
+}

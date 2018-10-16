@@ -14,6 +14,19 @@ $(function(){
 		}
 	}
 	setUsername();
+	//设置购物车数量
+	function setShopcar(){
+		var dataArr=JSON.parse(localStorage.getItem('shopcar'));
+		var a=0;
+		if(dataArr!='null' && dataArr.toString()!=''){//没有商品对象
+			for(var i=0;i<dataArr.length;i++){
+				console.log(dataArr[i].count)
+				a+=Number(dataArr[i].count);
+			}	
+		}
+		$('.shopcar-count').html(a);
+	}
+	setShopcar();
 	//时间处理程序
 	$(".qrimg").mouseenter(function(){
 		$(this).animate({left:'20px'});
