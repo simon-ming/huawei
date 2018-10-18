@@ -6,7 +6,7 @@ $(function(){
 	// 渲染购物车数据到页面
 	// 获取localstorage
 	var dataArr=JSON.parse(localStorage.getItem('shopcar'));
-	if(dataArr=='null' || dataArr.toString()==''){//没有商品对象
+	if(dataArr==null || dataArr.toString()==''){//没有商品对象
 		$('.gettotal-box,.shopcar-operation').hide();
 		$('.noshop').show();
 	}else{
@@ -102,8 +102,9 @@ $(function(){
 		}
 		// 删除购物车
 		$('.shopcar-trade .det-area').on('click','.shop-operate a',function(){
-			var name=$(this).parents('.shopcar-trade')[0].name;
-			var id=$(this).parents('.shopcar-trade')[0].goodsid;
+			var parent=$(this).parents('.shopcar-trade')[0];
+			var name=parent.name;
+			var id=parent.goodsid;
 			operateLocalStorage(name,id,'no',0)//传0删除匹配的对象
 			$(this).parents('.shopcar-trade').remove()//删除dom元素
 			getTotal();

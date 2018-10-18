@@ -115,9 +115,9 @@
 	<div class="login-window"></div>
 	<script>
 		$(function(){
-			$('.header').load('public/header_footer.html .header-href');
-			$('.footer').load('public/header_footer.html .footer');
-			$('.login-window').load('public/header_footer.html .login',function(){
+			$('.header').load('header_footer.html .header-href');
+			$('.footer').load('header_footer.html .footer');
+			$('.login-window').load('header_footer.html .login',function(){
 				$('head').append("<script src='js/public.js'><\/script>");//网页加载完后执行函数
 				$(function(){
 					

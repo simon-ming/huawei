@@ -18,7 +18,7 @@ $(function(){
 	function setShopcar(){
 		var dataArr=JSON.parse(localStorage.getItem('shopcar'));
 		var a=0;
-		if(dataArr!='null' && dataArr.toString()!=''){//没有商品对象
+		if(dataArr!=null && dataArr.length>0){//没有商品对象
 			for(var i=0;i<dataArr.length;i++){
 				console.log(dataArr[i].count)
 				a+=Number(dataArr[i].count);

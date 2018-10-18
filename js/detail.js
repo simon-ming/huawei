@@ -127,7 +127,7 @@ $(function(){
 				   	var jsonStr='['+JSON.stringify(obj)+']';
 				   	var curStorage=localStorage.getItem('shopcar');
 				   	var shopcarArr=JSON.parse(curStorage);
-				   	if(curStorage){
+				   	if(shopcarArr!=null && shopcarArr.length>0){
 				   		//循环所有数组里的对象,如果没有商品重复则创建新的对象
 				   		var noRepeat=true;
 				   		for(var i=0;i<shopcarArr.length;i++){
